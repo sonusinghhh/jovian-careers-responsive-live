@@ -1,37 +1,56 @@
+/* Base styles (extra small devices - mobile) */
+/* CSS rules */
+
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: #444444;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #222222;
-
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
 a {
   text-decoration: none;
-  color: #3B82F6;
+  color: #3b82f6;
 }
 
-a:hover, a:focus {
-  color: #1D4ED8;
+a:hover,
+a:focus {
+  color: #1d4ed8;
 }
 
 #navbar {
@@ -39,34 +58,32 @@ a:hover, a:focus {
   margin: 0;
 }
 
+#logo-with-text {
+  display: none;
+}
+
 #banner {
   object-fit: cover;
+  width: 100%;
+  height: 120px;
 }
-
 
 h1 {
-    text-align: center;
-}
-
-#banner {
-   width: 100%; 
+  text-align: center;
+  margin: 4px 0;
+  padding: 0;
 }
 
 #about {
   display: flex;
-  max-width: 800px;
+  flex-direction: column;
+  /*   max-width: 800px; */
   margin: 0 auto;
   padding: 8px;
 }
 
 #description {
-  width: 50%;
-  padding-right: 8px;
-  font-size: 1.25rem;
-}
-
-#team {
-  width: 50%;
+  padding: 0 8px;
 }
 
 #team-image {
@@ -74,37 +91,46 @@ h1 {
   width: 100%;
 }
 
-#jobs-table {
-  width: 100%;
-  border: 1px solid gray;
-  border-collapse: collapse;
-}
-
-.jobs-header-row th {
-  border: 1px solid gray;
-  padding: 8px;
-  background-color: #BFDBFE;
-  text-align: center;
-  color: #222222;
-}
-
-.jobs-data-row td {
-  border: 1px solid gray;
-  padding: 8px;
-}
-
-#jobs-table tr:nth-child(odd) {
-  background-color: #EFF6FF;
-}
-
-
-
 h2 {
   text-align: center;
+  margin: 8px 0;
+}
+
+#jobs {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+#jobs-table {
+  display: none;
+}
+
+#jobs-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.job {
+  border: 1px solid #7f90bd;
+  border-radius: 5px;
+  padding: 6px 8px;
+  margin: 4px;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: larger;
+  padding-bottom: 4px;
+}
+
+.job-detail {
+  color: #888888;
 }
 
 #application {
-  max-width: 800px;
+  max-width: 450px;
   margin: 0 auto;
   padding: 0 8px;
 }
@@ -117,17 +143,36 @@ h2 {
   font-weight: 600;
 }
 
-#application-form input, select, textarea {
+#application-form input,
+select,
+textarea {
   padding: 8px;
   font-size: 1.25rem;
   margin-top: 4px;
   border-radius: 5px;
   border: 1px solid gray;
+  /*  width: 90%; */
+}
+
+.form-group input[type="submit"] {
+  width: 30%;
+}
+
+.form-group input[type="text"],
+[type="email"],
+[type="tel"],
+[type="email"],
+[type="file"] {
+  width: 90%;
+}
+
+.form-group select {
+  width: 95%;
 }
 
 .form-group textarea {
-  width: 80%;
-  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-group input[type="checkbox"] {
@@ -136,45 +181,189 @@ h2 {
 }
 
 .form-group input[type="submit"] {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
   color: white;
   font-weight: 500;
   cursor: pointer;
-}
-
-#jobs {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 8px;
-}
-
-h3 {
-  margin-bottom: 4px;
-  margin-top: 0;
-}
-
-.apply {
-  float: right;
+  width: 40%;
 }
 
 #footer {
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   padding: 8px;
   margin-top: 32px;
   text-align: center;
 }
 
 #footer-links {
-  list-style: none;  
+  list-style: none;
+  padding-left: 0;
 }
 
 #footer-links li {
-  display: inline;
+  /* display: inline; */
   margin: 0 16px;
+  padding: 4px 0;
 }
 
 .copyright {
-  color: #71717A;
+  color: #71717a;
   font-size: 0.875rem;
 }
 
+/* Small devices (tablets) */
+@media screen and (min-width: 576px) {
+  /* CSS rules */
+  #logo-with-text {
+    display: block;
+  }
+  #logo {
+    display: none;
+  }
+
+  #banner {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+
+  #about {
+    max-width: 450px;
+  }
+
+  #footer-links li {
+    display: inline;
+  }
+}
+
+/* Medium devices (tablets/laptops) */
+@media screen and (min-width: 768px) {
+  /* CSS rules */
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    margin-top: 32px;
+    padding: 8px 0;
+  }
+
+  #banner {
+    height: 300px;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: row;
+    max-width: 650px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  #desription p {
+    display: flex;
+    flex-direction: row;
+    max-width: 650px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #description {
+    padding: 20px;
+    width: 50%;
+  }
+
+  #team {
+    width: 50%;
+  }
+
+  #team-image {
+    height: 280px;
+    width: 350px;
+  }
+
+  h2 {
+    margin-top: 24px;
+  }
+
+  #jobs {
+    max-width: 600px;
+  }
+
+  #jobs-list {
+    display: none;
+  }
+
+  #jobs-table {
+    display: block;
+  }
+
+  #jobs-table {
+    display: table;
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+  }
+
+  .jobs-header-row th {
+    border: 1px solid gray;
+    padding: 8px;
+    background-color: #bfdbfe;
+    text-align: center;
+    color: #222222;
+  }
+
+  .jobs-data-row td {
+    border: 1px solid gray;
+    padding: 8px;
+  }
+
+  #jobs-table tr:nth-child(odd) {
+    background-color: #eff6ff;
+  }
+}
+
+/* Large devices (laptops/desktops) */
+@media screen and (min-width: 992px) {
+  /* CSS rules */
+  #about {
+    max-width: 800px;
+  }
+
+  #jobs {
+    max-width: 800px;
+  }
+
+  #application {
+    max-width: 800px;
+  }
+
+  .form-group input[type="text"],
+  [type="email"],
+  [type="tel"],
+  [type="email"],
+  [type="file"] {
+    width: 50%;
+  }
+
+  .form-group textarea {
+    width: 80%;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .form-group input[type="submit"] {
+    font-weight: 700;
+    width: 35%;
+    cursor: pointer;
+  }
+  #team-image {
+    width: 100%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media screen and (min-width: 1200px) {
+  /* CSS rules */
+  #about {
+    max-width: 1000px;
+  }
+}
